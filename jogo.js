@@ -3,8 +3,8 @@ var largura = 0
 var vidas = 1
 var tempo = 15
 
-var criarMosquitoTempo = 1500
 
+var criarMosquitoTempo = 1500
 var nivel = window.location.search
 nivel = nivel.replace('?', '')
 
@@ -22,7 +22,6 @@ function ajustaTamanhoPalcoJogo(){
      largura = window.innerWidth
      console.log(largura, altura)
 }
-
 ajustaTamanhoPalcoJogo()
 
 var cronometro = setInterval(function(){
@@ -50,7 +49,7 @@ function positionRandom(){
     if(document.getElementById('mosquito')){
         document.getElementById('mosquito').remove()
 
-        if( vidas > 3){
+        if( vidas >= 3){
             location.href = 'fim_jogo.html'
         }else{
         document.getElementById('v' + vidas).src = 'imagens/coracao_vazio.png'
